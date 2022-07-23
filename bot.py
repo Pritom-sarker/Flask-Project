@@ -7,4 +7,4 @@ def hello():
 	return "Hello Geeks!! from Google Colab"
 
 if __name__ == "__main__":
-    app.run(debug=True, host="149.28.29.54")
+    app.run(host="149.28.29.54", port=5000)
