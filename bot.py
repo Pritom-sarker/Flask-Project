@@ -9,4 +9,4 @@ def hello():
 	return "Hello Geeks!! from Google Colab"
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
