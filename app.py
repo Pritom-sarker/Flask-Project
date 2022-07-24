@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/buy")
 def hello():
-	return "{}".format(['Buy XAUUSD 1708.6 1710.0 1703.0 0.01','Buy XAUUSD 0 1710.0 1703.0 0.01','sell XAUUSD 1708.6 1706.0 1713.0 0.1' ][random.randint(0,2)])
+	return "{}".format(['Buy XAUUSD 1724.6 1726.0 1720.0 0.01','Buy XAUUSD 0 1730.0 1703.0 0.01','sell XAUUSD 1725.6 1706.0 1733.0 0.1' ][random.randint(0,2)])
 
 
 
