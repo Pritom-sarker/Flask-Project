@@ -54,7 +54,7 @@ def telegram_bot_sendtext(bot_message):
 
 
 
-@client.on(events.NewMessage(chats='GOLD KING VIP'))
+@client.on(events.NewMessage(chats='test'))
 async def my_event_handler(event):
     s = str(event.raw_text).lower()
     telegram_bot_sendtext(s)
