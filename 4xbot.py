@@ -37,27 +37,12 @@ def SL(parts):
 
 
 # Remember to use your own values from my.telegram.org!
-api_id = 7245145
-api_hash = '962930c707a46df8f9f6f31244c502c5'
-client = TelegramClient('anon', api_id, api_hash)
-
-
-def telegram_bot_sendtext(bot_message):
-    
-    bot_token = '5411042447:AAEsMTImzpuh3r2lc3MYlOAAROFMVUzvv-Q'
-    bot_chatID = '-1001580874787'
-    send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + '&parse_mode=Markdown&text=' + bot_message
-
-    response = requests.get(send_text)
-
-    return response.json()
 
 
 
 @client.on(events.NewMessage(chats='test'))
 async def my_event_handler(event):
     s = str(event.raw_text).lower()
-    telegram_bot_sendtext(s)
     parts = s.split('\n')
     signal = (findSignal(parts))
     tp = (TP(parts))
@@ -67,6 +52,7 @@ async def my_event_handler(event):
     f = open('query.txt', 'w')
     f.write(query)
     f.close()
+    print(query)
 
 
     
