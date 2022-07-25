@@ -52,7 +52,7 @@ async def my_event_handler(event):
     tp = (TP(parts))
     sl = (SL(parts))
     # print(signal, tp, sl)
-    query = '''{} {} {} {} {}'''.format(signal[0], signal[1], tp[0], sl,'0.01')
+    query = '''{} XAUUSD {} {} {} {}'''.format(signal[0], signal[1], tp[0], sl,'0.01')
     print(query)
     f = open('query.txt', 'w')
     f.write(query)
