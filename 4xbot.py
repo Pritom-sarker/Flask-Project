@@ -37,6 +37,10 @@ def SL(parts):
 
 
 # Remember to use your own values from my.telegram.org!
+api_id = 7245145
+api_hash = '962930c707a46df8f9f6f31244c502c5'
+client = TelegramClient('anon', api_id, api_hash)
+
 
 
 
@@ -49,10 +53,10 @@ async def my_event_handler(event):
     sl = (SL(parts))
     # print(signal, tp, sl)
     query = '''{} {} {} {} {}'''.format(signal[0], signal[1], tp[0], sl,'0.01')
+    print(query)
     f = open('query.txt', 'w')
     f.write(query)
     f.close()
-    print(query)
 
 
     
